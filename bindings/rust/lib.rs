@@ -42,22 +42,17 @@ pub fn language() -> Language {
     unsafe { tree_sitter_rust() }
 }
 
-/// The source of the Rust tree-sitter grammar description.
-pub const GRAMMAR: &str = include_str!("../../grammar.js");
-
 /// The syntax highlighting query for this language.
 pub const HIGHLIGHT_QUERY: &str = include_str!("../../queries/highlights.scm");
+
+/// The local-variable syntax highlighting query for this language.
+pub const LOCALS_QUERY: &str = include_str!("../../queries/locals.scm");
 
 /// The injections query for this language.
 pub const INJECTIONS_QUERY: &str = include_str!("../../queries/injections.scm");
 
 /// The symbol tagging query for this language.
 pub const TAGGING_QUERY: &str = include_str!("../../queries/tags.scm");
-
-/// The content of the [`node-types.json`][] file for this grammar.
-///
-/// [`node-types.json`]: https://tree-sitter.github.io/tree-sitter/using-parsers#static-node-types
-pub const NODE_TYPES: &str = include_str!("../../src/node-types.json");
 
 #[cfg(test)]
 mod tests {
