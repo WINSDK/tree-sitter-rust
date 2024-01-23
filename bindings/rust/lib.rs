@@ -51,9 +51,6 @@ pub const LOCALS_QUERY: &str = include_str!("../../queries/locals.scm");
 /// The injections query for this language.
 pub const INJECTIONS_QUERY: &str = include_str!("../../queries/injections.scm");
 
-/// The symbol tagging query for this language.
-pub const TAGGING_QUERY: &str = include_str!("../../queries/tags.scm");
-
 #[cfg(test)]
 mod tests {
     #[test]
